@@ -25,16 +25,16 @@ Getting Started
 ================
 
 Adding username and email. (Either of these will work.)
-###1. Find .gitconfig file (probable location example C:\Users\sara)
-  *Edit file to include - 
-   ```shell
-     [user]
-       name = githubUserName
-       email = githubEmail
-     [push]
-       default = simple
-  ```
-###2. From command line type
+  * Find .gitconfig file (probable location example C:\Users\sara)
+    *Edit file to include - 
+     ```shell
+       [user]
+         name = githubUserName
+         email = githubEmail
+       [push]
+         default = simple
+    ```
+  * From command line type
   ```shell
   git config --global user.name "John Doe"
   git config --global user.email johndoe@example.com
@@ -53,7 +53,7 @@ Example:
 Branching
 =========
 
-CS3440 Branch Names
+Branch Names
 -------------------
 
 ###master
