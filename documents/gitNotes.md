@@ -25,18 +25,17 @@ Getting Started
 ================
 
 Add username and email- either of these will work
-  1. Find .gitconfig file
-    - probable location example C:\Users\sara
-    edit file to include - 
-      [user]
-        name = githubUserName
-        email = githubEmail
-      [push]
-        default = simple
-  2. From command line type
-    git config --global user.name "John Doe"
-    git config --global user.email johndoe@example.com
-    git config --global push.default simple
+1. Find .gitconfig file (probable location example C:\Users\sara)
+  edit file to include - 
+     [user]
+       name = githubUserName
+       email = githubEmail
+     [push]
+       default = simple
+2. From command line type
+  git config --global user.name "John Doe"
+  git config --global user.email johndoe@example.com
+  git config --global push.default simple
 
 Clone existing repo
   git clone https://github.com/username/repo.git
