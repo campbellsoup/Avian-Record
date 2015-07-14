@@ -1,16 +1,50 @@
 [comment]: # (You are viewing this in a raw form, for a more comprehensive view. View it on github.)
 
-Branching
-=========
-
 Resources
 ---------
+Learn more with the [git documentation](https://git-scm.com/doc)
+
+[Download git](https://git-scm.com/)
+
+[First time setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+Sick and tired of typing username and password.
+  Easy fix-
+  [cache username and password](http://git-scm.com/docs/git-credential-cache)
+  [Example](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
+  More secure-
+  [ssh username and password authentication](https://help.github.com/articles/generating-ssh-keys/)
 
 [Example branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 A blog post discussing a branching model a developer uses for work and personal projects.
 
 [tryGit](https://try.github.io)
 Learn how to use Git by reviewing the basic concepts of Git version control. Try out this introductory course that was created with GitHub.
+
+Getting Started
+================
+
+Add username and email- either of these will work
+  1. Find .gitconfig file
+    - probable location example C:\Users\sara
+    edit file to include - 
+      [user]
+        name = githubUserName
+        email = githubEmail
+      [push]
+        default = simple
+  2. From command line type
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+    git config --global push.default simple
+
+Clone existing repo
+  git clone https://github.com/username/repo.git
+Example:
+  git clone https://github.com/campbellsoup/Avian-Record.git
+
+Branching
+=========
 
 CS3440 Branch Names
 -------------------
