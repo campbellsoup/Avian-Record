@@ -24,15 +24,16 @@ Learn how to use Git by reviewing the basic concepts of Git version control. Try
 Getting Started
 ================
 
-Add username and email- either of these will work
--------------------------------------------------
+Adding username and email. (Either of these will work.)
 ###1. Find .gitconfig file (probable location example C:\Users\sara)
-  edit file to include - 
+  *Edit file to include - 
+   ```shell
      [user]
        name = githubUserName
        email = githubEmail
      [push]
        default = simple
+  ```
 ###2. From command line type
   ```shell
   git config --global user.name "John Doe"
