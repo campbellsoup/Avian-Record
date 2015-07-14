@@ -1,7 +1,7 @@
 [comment]: # (You are viewing this in a raw form, for a more comprehensive view. View it on github.)
 
 Resources
----------
+==========
 Learn more with the [git documentation](https://git-scm.com/doc)
 
 [Download git](https://git-scm.com/)
@@ -25,23 +25,30 @@ Getting Started
 ================
 
 Add username and email- either of these will work
-1. Find .gitconfig file (probable location example C:\Users\sara)
+-------------------------------------------------
+###1. Find .gitconfig file (probable location example C:\Users\sara)
   edit file to include - 
      [user]
        name = githubUserName
        email = githubEmail
      [push]
        default = simple
-2. From command line type
+###2. From command line type
+  ```shell
   git config --global user.name "John Doe"
   git config --global user.email johndoe@example.com
   git config --global push.default simple
+  ```
 
-Clone existing repo
+Clone Existing Repo
+--------------------
+  ```shell
   git clone https://github.com/username/repo.git
+  ```
 Example:
+  ```shell
   git clone https://github.com/campbellsoup/Avian-Record.git
-
+  ```
 Branching
 =========
 
