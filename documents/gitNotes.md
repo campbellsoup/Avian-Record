@@ -2,17 +2,17 @@
 
 Resources
 ==========
-Learn more with the [git documentation](https://git-scm.com/doc)
+Learn more with the [git documentation.](https://git-scm.com/doc)
 
-[Download git](https://git-scm.com/)
+[Download git.](https://git-scm.com/)
 
-[First time setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+[First time setup.](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 Sick and tired of typing username and password.
-  Easy fix-
+  * Easy fix-
   [cache username and password](http://git-scm.com/docs/git-credential-cache)
   [Example](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
-  More secure-
+  * More secure-
   [ssh username and password authentication](https://help.github.com/articles/generating-ssh-keys/)
 
 [Example branching model](http://nvie.com/posts/a-successful-git-branching-model/)
