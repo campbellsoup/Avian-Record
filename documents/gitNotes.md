@@ -10,8 +10,8 @@ Learn more with the [git documentation.](https://git-scm.com/doc)
 
 Sick and tired of typing username and password.
   * Easy fix-
-  [cache username and password](http://git-scm.com/docs/git-credential-cache)
-  [Example](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
+  [cache username and password](http://git-scm.com/docs/git-credential-cache) 
+  Another[example](http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github)
   * More secure-
   [ssh username and password authentication](https://help.github.com/articles/generating-ssh-keys/)
 
@@ -27,17 +27,29 @@ Getting Started
 Adding username and email. (Either of these will work.)
   * Find .gitconfig file (probable location example C:\Users\sara)
     *Edit file to include - 
-     ```shell
+     ```shell 
        [user]
-         name = githubUserName
+      ```
+      ```shell 
+         name = githubUserName 
+      ```
+      ```shell
          email = githubEmail
+      ```
+       ```shell  
        [push]
+       ```
+        ```shell
          default = simple
     ```
   * From command line type
   ```shell
   git config --global user.name "John Doe"
+   ```
+   ```shell  
   git config --global user.email johndoe@example.com
+   ```
+   ```shell  
   git config --global push.default simple
   ```
 
