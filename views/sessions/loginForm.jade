@@ -1,15 +1,11 @@
-extend /layout
+extend ../layout
 
 block content
-	h2 Sign In
+	h3 Sign In
 	form(method='post' action='/login')
 		p
-			label Username
-			br
-			input(type="text" name="username")
+			input(type="text" name="username" placeholder="Username")
 		p
-			label Password
-			br
-			input(type="text" name="password")
+			input(type="text" name="password" placeholder="Password")
 		p
 			input(type="submit" value='Sign In')

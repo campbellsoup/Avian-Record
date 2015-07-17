@@ -8,16 +8,13 @@ app.set('view engine', 'jade');
 
 app.use('/', express.static('public'));
 
-// test hello world  
-app.get('/', function (req,res)
-{
-	res.render('hello');
-});
-
+// test 
 app.get('/login', function (req,res)
 {
-	res.render('/sessions/loginForm');
+	res.render('sessions/loginForm');
 });
+
+
 
 app.listen(8080, function()
 {
