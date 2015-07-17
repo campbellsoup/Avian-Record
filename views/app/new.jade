@@ -1,0 +1,24 @@
+extends ../layout
+
+block title
+	title New Record
+block content
+	h3 Add New Aviary Record
+	form(method='post' action='/')
+		input(type='text' name='species' placeholder='species')
+		input(type='text' name='hatchDate' placeholder='hatch date or import date')
+		input(type='submit' value='save')
+		//-
+			input(type='text' name='subSpecies' placeholder='sub-species')
+			input(type='text' name='hybridName' placeholder='hybrid name')
+			input(type='text' name='breeder' placeholder='breeder')
+			input(type='text' name='fatherId' placeholder='father ID')
+			input(type='text' name='motherId' placeholder='mother ID')
+			input(type='text' name='gender' placeholder='gender')
+			input(type='text' name='bandId' placeholder='band ID')
+			input(type='text' name='microchipId' placeholder='microchip ID')
+			input(type='text' name='dna' placeholder='DNA fingerprint sample ID')
+			input(type='text' name='mutation' placeholder='mutation')
+			input(type='text' name='petName' placeholder='pet name')
+			input(type='text' name='' placeholder='')
+			input(type='text' name='' placeholder='')
