@@ -14,6 +14,11 @@ app.get('/', function (req,res)
 	res.render('hello');
 });
 
+app.get('/login', function (req,res)
+{
+	res.render('/sessions/loginForm');
+});
+
 app.listen(8080, function()
 {
 	console.log('Server ready...');
