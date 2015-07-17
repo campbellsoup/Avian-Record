@@ -8,11 +8,14 @@ app.set('view engine', 'jade');
 
 app.use('/', express.static('public'));
 
-// test hello world  
+// test a file  
 app.get('/', function (req,res)
 {
 	res.render('hello');
 });
+
+// routes
+app.use('/', require('./routes/appNode.routes.js'));
 
 app.listen(8080, function()
 {
