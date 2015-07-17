@@ -9,9 +9,9 @@ app.set('view engine', 'jade');
 app.use('/', express.static('public'));
 
 // test 
-app.get('/login', function (req,res)
+app.get('/', function (req,res)
 {
-	res.render('sessions/loginForm');
+	res.render('users/registrationForm');
 });
 
 
