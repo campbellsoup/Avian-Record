@@ -26,10 +26,12 @@ Why and Expansion possibilities:
   There are unique situations where species are struggling in the wild and/or captive populations.  This application could help identify, what is currently loosely tied together if at all, other aviculturist working with the same species. The result could be as defined as a recovery project where many individuals can support each other.  Or a tool to find new bloodlines to support outcrossing generations for healthier gene pools.
   
   
-  Exotic
+  Exotic:
+  
     There are many exocit uses for this application beyond the avian world, including all areas of reptiles and other pets.
     
-  Domesticated
+  Domesticated:
+  
     This application could be easily modified for ranchers, farmers, or breeders of any livestock.  Something comparable would be stud bookkeepers in the horse industry.  However, this process is still paper based and this is the case in other areas where records are kept.  This application could potentially replace or be adopted by the AKC registery for dogs.
 
 
