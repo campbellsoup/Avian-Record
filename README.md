@@ -7,7 +7,7 @@ What is the App?
   
     1) Maintain their aviary Inventory(birds).  Both aquired birds and produced offspring.
     
-    2) Manage Breeding pairs by accessing the database to calculate "Co-Efficient of Relations", persistent notes and       calculating possible outcomes for pairs with unique color mutations.
+    2) Manage Breeding pairs by accessing the database to calculate "Co-Efficient of Relations", persistent notes and calculating possible outcomes for pairs with unique color mutations.
     
     3) Provide a Record log for active clutches per pair.  This function will hold temporary data recorded on nestbox checks until the clutch is pulled.  At which point the clutch log would collapse into select persistant-data, stored permanently with the pair.  User could add information or data as a note to the persistant-data.
 
