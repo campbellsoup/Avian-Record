@@ -12,7 +12,7 @@ app.use('/', express.static('public'));
 
 app.get('/', function (req,res)
 {
-	res.render('app/new');
+	res.render('app/singleShow');
 });
 
 // routes
