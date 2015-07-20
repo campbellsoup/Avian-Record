@@ -56,12 +56,14 @@ var AppController = {
 		}, function (err, item) {
 			res.redirect('/app')
 		});
-	}/*,
-	
+	},
 	//Delete
 	destroy: function (req,res)
 	{
-		res.send('destroy connected')
-	}*/
+		Inventory.remove({_id:req.params.id}, function (err)
+		{
+			res.redirect('/app');
+		})
+	}
 };
 module.exports = AppController;

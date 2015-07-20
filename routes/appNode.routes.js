@@ -17,6 +17,6 @@ router.get('/:id/edit', NodeController.edit);
 router.put('/:id', NodeController.update);
 
 //Delete
-//router.delete('/', NodeController.destoy);
+router.delete('/:id', NodeController.destroy);
 
 module.exports = router;
