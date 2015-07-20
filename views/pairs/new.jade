@@ -1,0 +1,22 @@
+extends ../layout
+
+block title
+	title New Breeding Pair
+block content
+	h3 Add New Breeding Pair
+	form(method='post' action='/app')
+		p
+			label Male-Band ID
+			input(type='text' name='band' placeholder='Father ID')
+		p
+			label Female-Band ID
+			input(type='text' name='band' placeholder='Hen ID')
+		p
+			//-Calculation based on Male&Female pedegree
+			label Co-Efficient of Relations
+			div(id='coefficientRelations')
+		p
+			label Location
+			input(type='text' name='location' placeholder='Cage#')
+		p
+			input(type='submit' value='Save')
