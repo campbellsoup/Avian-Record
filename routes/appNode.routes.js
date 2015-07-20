@@ -9,7 +9,7 @@ router.get('/app/new', NodeController.new);
 //router.post('/aviary', NodeController.create);
 
 //Read
-//router.get('/aviary', NodeController.index);
+router.get('/', NodeController.index);
 //router.get('/aviary/show', NodeController.show);
 
 //Update
