@@ -11,7 +11,7 @@ mongoose.connect('mongodb://mongodb.cs.dixie.edu/scawley');
 
 
 var app = express();
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 8080));
 
 app.set('views', './views');
 app.set('view engine', 'jade');
