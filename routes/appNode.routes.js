@@ -5,11 +5,11 @@ var NodeController = require('../controllers/appNode.ctrl.js');
 var router = express.Router();
 
 //Create
-router.get('/app/new', NodeController.new);
-//router.post('/aviary', NodeController.create);
+router.get('/new', NodeController.new);
+router.post('/', NodeController.create);
 
 //Read
-//router.get('/aviary', NodeController.index);
+router.get('/', NodeController.index);
 //router.get('/aviary/show', NodeController.show);
 
 //Update
