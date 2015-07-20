@@ -6,8 +6,8 @@ var express = require('express'),
 	methodOverride = require('method-override');
 
 // access remote aviary database
-mongoose.connect('mongodb://mongodb.cs.dixie.edu/scawley');
-//mongoose.connect('mongodb://scaw76:collide76@ds047622.mongolab.com:47622/aviary');
+//mongoose.connect('mongodb://mongodb.cs.dixie.edu/scawley');
+mongoose.connect('mongodb://scaw76:collide76@ds047622.mongolab.com:47622/aviary');
 
 
 var app = express();
@@ -23,7 +23,7 @@ app.use('/', express.static('public'));
 // test a jade file  
 app.get('/', function (req,res)
 {
-	res.render('hello');
+	res.render('app/new');
 });
 
 // routes
