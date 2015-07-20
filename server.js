@@ -6,11 +6,12 @@ var express = require('express'),
 	methodOverride = require('method-override');
 
 // access remote aviary database
-mongoose.connect('mongodb://scaw76:collide76@ds047622.mongolab.com:47622/aviary')
+mongoose.connect('mongodb://mongodb.cs.dixie.edu/scawley');
+//mongoose.connect('mongodb://scaw76:collide76@ds047622.mongolab.com:47622/aviary');
 
 
 var app = express();
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 3000));
 
 app.set('views', './views');
 app.set('view engine', 'jade');
