@@ -5,7 +5,7 @@ var NodeController = require('../controllers/appNode.ctrl.js');
 var router = express.Router();
 
 //Create
-router.get('/app/new', NodeController.new);
+router.get('/new', NodeController.new);
 router.post('/', NodeController.create);
 
 //Read
