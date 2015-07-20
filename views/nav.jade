@@ -1,12 +1,11 @@
-doctype html
-html
-	
+#nav
 	Label Navigation
-		p 
-		a(href='views/app/index') Avian Inventory
-		p 
-		a(href='views/pairs/....') Active Pairs
 		p
-		a(href='views/pairs/listLogs') Nestbox List-Log
+		a(href='/app/index.jade') Avian Inventory
+		|  - 
+		a(href='/pairs/index.jade') Active Pairs
+		|  - 
+		a(href='/logs/index.jade') Nestbox List-Log
+		|  - 
+		a(href='/app/index/...query by location') In Nursery
 		p
-		a(href='views/app/index/...query by location') In Nursery
