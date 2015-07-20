@@ -26,15 +26,15 @@ var AppController = {
 				inventory: inventory
 			});
 		});
-	},
+	},/*
 	show: function (req,res)
 	Inventory.findOne({_id: req.params.id}, function (err, item) 
-	{
-		res.render('app/show', {
-			item: item
+		{
+			res.render('app/edit', {
+				item: item
+			});
 		});
-	});
-
+	*/
 	//Update
 	edit: function (req,res)
 	{
