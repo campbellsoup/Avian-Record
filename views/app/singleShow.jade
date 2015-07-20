@@ -1,0 +1,16 @@
+extend ../layout
+
+block content
+	h2 #{aviary.species} #{hybridSpecies} | Band ID: #{aviay.band}
+		p Sub-Species: #{subspecies} | Mutation: #{aviary.mutation} | Name: #{aviary.petName}
+		p Hatched: #{aviary.hatch} | #{aviary.gender} | Father ID: #{aviary.dad} X Mother ID: #{aviary.mom}
+		p Location: #{aviary.location} | Origin/Breeder: #{aviary.breeder} | Acquired from: #{aviary.acquired}
+	h3 Identification and Notes
+		p DNA ID: #{aviary.dna} | Microchip: #{aviary.chip} | Date Added to System: #{aviary.???}
+		p Current Owner: #{aviary.owner} | Status: #{aviary.available} | 
+			br **User or Profile Name
+		p Notes: #{aviary.notes} 
+		p
+			a(href='/app/#{aviary._id}/edit') Edit Information
+			form(method='post' action='/app/#{aviary._id}?_method=delete')
+				input(type='submit' value='Delete this Bird') 
