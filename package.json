@@ -19,6 +19,7 @@
   "homepage": "https://github.com/campbellsoup/Avian-Record#readme",
   "dependencies": {
     "express": "^4.13.1",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "mongoose": "^4.0.7"
   }
 }

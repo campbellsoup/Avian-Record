@@ -1,14 +1,21 @@
 extends ../layout
 
 block title
-	title New Record
+	title New Inventory Item
 block content
-	h3 Add New Aviary Record
+	h3 Add New Inventory Item
 	//- add required to required fields before release
-	form(method='post' action='/')
+	form(method='post' action='/app')
 		p
 			label Species
 			input(type='text' name='species' placeholder='Species')
+		p
+			label Pet Name
+			input(type='text' name='pet' placeholder='Pet Name')
+		p
+			label Location
+			input(type='text' name='location' placeholder='Location')
+	//-
 		p
 			label Sub-Species
 			input(type='text' name='subspecies' placeholder='Sub-Species')
@@ -42,12 +49,8 @@ block content
 		p
 			label Mutation
 			input(type='text' name='mutation' placeholder='Mutation')
-		p
-			label Location
-			input(type='text' name='location' placeholder='Location')
-		p
-			label Pet Name
-			input(type='text' name='' placeholder='Pet Name')
+		
+		
 		p
 			label Status
 			input(type='text' name='' placeholder='Status')
