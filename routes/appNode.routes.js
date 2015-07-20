@@ -6,7 +6,7 @@ var router = express.Router();
 
 //Create
 router.get('/app/new', NodeController.new);
-//router.post('/aviary', NodeController.create);
+router.post('/', NodeController.create);
 
 //Read
 router.get('/', NodeController.index);

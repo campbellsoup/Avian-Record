@@ -1,3 +1,4 @@
+/*
 var inventory = [
 	'bob',
 	'joe',
@@ -11,7 +12,7 @@ var Inventory = {
 };
 
  module.exports = Inventory;
-/*
+*/
 var mongoose = require('mongoose')
 
 var schema = new mongoose.Schema({
@@ -19,6 +20,6 @@ var schema = new mongoose.Schema({
 	pet: String,
 	location: String
 });
- var Iventory = mongoose.model('Inventory', schema);
+var Inventory = mongoose.model('Inventory', schema);
 
-*/
+module.exports = Inventory;
