@@ -1,6 +1,8 @@
 extends ../layout
 block content
 	h1 Listing All Records For Aviary App
+	p
+		a(href='/app/new') New Record
 	table
 		tr 
 			th Name
@@ -9,6 +11,6 @@ block content
 		each item in inventory
 			tr
 				td
-					a(href='/app/#{item._id}/edit')= item.pet
+					a(href='/app/#{item._id}/show')= item.pet
 				td= item.species
 				td= item.location
