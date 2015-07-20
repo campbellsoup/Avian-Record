@@ -1,12 +1,14 @@
-h1 Listing All Records For Aviary App
-table
-	tr 
-		th Name
-		th Species
-		th Location
-	each item in inventory
-		tr
-			td
-				a(href='/app/'+ item._id)= item.pet
-			td= item.species
-			td= item.location
+extends ../layout
+block content
+	h1 Listing All Records For Aviary App
+	table
+		tr 
+			th Name
+			th Species
+			th Location
+		each item in inventory
+			tr
+				td
+					a(href='/app/#{item._id}/edit')= item.pet
+				td= item.species
+				td= item.location

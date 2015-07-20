@@ -26,22 +26,37 @@ var AppController = {
 				inventory: inventory
 			});
 		});
-	}/*
+	},/*
 	show: function (req,res)
-	{
-		res.send('show connected')
-	},
-
+	Inventory.findOne({_id: req.params.id}, function (err, item) 
+		{
+			res.render('app/edit', {
+				item: item
+			});
+		});
+	*/
 	//Update
 	edit: function (req,res)
 	{
-		res.send('edit connected')
+		Inventory.findOne({_id: req.params.id}, function (err, item) 
+		{
+			res.render('app/edit', {
+				item: item
+			});
+		});
+		
 	},
 	update: function (req,res)
 	{
-		res.send('update connected')
-	},
-
+		Inventory.findOneAndUpdate({_id: req.params.id},{
+			species: req.body.species,
+			pet: req.body.pet,
+			location: req.body.location
+		}, function (err, item) {
+			res.redirect('/app')
+		});
+	}/*,
+	
 	//Delete
 	destroy: function (req,res)
 	{

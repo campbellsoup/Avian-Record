@@ -1,20 +1,19 @@
 extends ../layout
-
 block title
-	title New Inventory Item
+	title Edit Record
 block content
-	h3 Add New Inventory Item
-	//- add required to required fields before release
-	form(method='post' action='/app')
+	h3 Edit Record
+	//-
+	form(method='post' action='/app/#{item._id}?_method=put')
 		p
 			label Species
-			input(type='text' name='species' placeholder='Species')
+			input(type='text' name='species' value=item.species)
 		p
 			label Pet Name
-			input(type='text' name='pet' placeholder='Pet Name')
+			input(type='text' name='pet' value=item.pet)
 		p
 			label Location
-			input(type='text' name='location' placeholder='Location')
+			input(type='text' name='location' value=item.location)
 		p
 			input(type='submit' value='Save')
 	//-
@@ -25,11 +24,8 @@ block content
 			label Hybrid Species
 			input(type='text' name='hybridSpecies' placeholder='Hybrid Species')
 		p
-			label Hatch Date
-			input(type='text' name='hatch' placeholder='Hatch Date)
-		p
-			label Import Date
-			input(type='text' name='import' placeholder='Import Date')
+			label Hatch or Import Date
+			input(type='text' name='hatchImport' placeholder='Hatch Date or Import Date')
 		p
 			label Breeder
 			input(type='text' name='breeder' placeholder='Breeder')

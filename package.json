@@ -21,6 +21,7 @@
     "body-parser": "^1.13.2",
     "express": "^4.13.1",
     "jade": "^1.11.0",
+    "method-override": "^2.3.4",
     "mongoose": "^4.0.7"
   }
 }
