@@ -21,20 +21,21 @@ var AppController = {
 	//Read
 	index: function (req,res)
 	{
-		Inventory.find({},function (err, inventory){
+		Inventory.find({},function (err, inventory)
+		{
 			res.render('app/index', {
 				inventory: inventory
 			});
 		});
-	},/*
-	show: function (req,res)
-	Inventory.findOne({_id: req.params.id}, function (err, item) 
+	},
+	show: function (req,res){
+		Inventory.findOne({_id: req.params.id}, function (err, item) 
 		{
-			res.render('app/edit', {
+			res.render('app/show', {
 				item: item
 			});
 		});
-	*/
+	},
 	//Update
 	edit: function (req,res)
 	{
