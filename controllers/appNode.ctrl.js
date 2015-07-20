@@ -5,18 +5,26 @@ var AppController = {
 	new: function (req,res)
 	{
 		res.render('app/new', {});
-	},/*
+	},
 	create: function (req,res)
 	{
-		res.send('create connected')
+		var inventory = new Inventory({
+			species: req.body.species,
+			pet: req.body.pet,
+			location: req.body.location
+		});
+		inventory.save(function (err,inventory){
+			res.redirect('/app');
+		});
 	},
-	*/
+	
 	//Read
 	index: function (req,res)
 	{
-		var records = Inventory.getAll();
-		res.render('app/index', {
-			records: records
+		Inventory.find({},function (err, inventory){
+			res.render('app/index', {
+				inventory: inventory
+			});
 		});
 	}/*
 	show: function (req,res)
