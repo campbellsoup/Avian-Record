@@ -8,12 +8,15 @@ app.set('view engine', 'jade');
 
 app.use('/', express.static('public'));
 
-// test 
+// test a file  
+
 app.get('/', function (req,res)
 {
-	res.render('users/registrationForm');
+	res.render('app/singleShow');
 });
 
+// routes
+app.use('/', require('./routes/appNode.routes.js'));
 
 
 app.listen(8080, function()
