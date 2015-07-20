@@ -18,9 +18,9 @@ app.use(bodyParser.urlencoded({ extended:false }));
 app.use('/', express.static('public'));
 
 // test a jade file  
-app.get('/new', function (req,res)
+app.get('/', function (req,res)
 {
-	res.render('app/new');
+	res.render('hello');
 });
 
 // routes
