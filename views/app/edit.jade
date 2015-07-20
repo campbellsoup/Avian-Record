@@ -3,8 +3,8 @@ block title
 	title Edit Record
 block content
 	h3 Edit Record
-	//-/app/#{item._id}?_method=put
-	form(method='post' action='')
+	//-
+	form(method='post' action='/app/#{item._id}?_method=put')
 		p
 			label Species
 			input(type='text' name='species' value=item.species)
