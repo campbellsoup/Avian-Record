@@ -1,0 +1,68 @@
+extends ../layout
+block title
+	title Edit Record
+block content
+	h3 Edit Record
+	//-/app/#{item._id}?_method=put
+	form(method='post' action='')
+		p
+			label Species
+			input(type='text' name='species' value=item.species)
+		p
+			label Pet Name
+			input(type='text' name='pet' value=item.pet)
+		p
+			label Location
+			input(type='text' name='location' value=item.location)
+		p
+			input(type='submit' value='Save')
+	//-
+		p
+			label Sub-Species
+			input(type='text' name='subspecies' placeholder='Sub-Species')
+		p
+			label Hybrid Species
+			input(type='text' name='hybridSpecies' placeholder='Hybrid Species')
+		p
+			label Hatch or Import Date
+			input(type='text' name='hatchImport' placeholder='Hatch Date or Import Date')
+		p
+			label Breeder
+			input(type='text' name='breeder' placeholder='Breeder')
+		p
+			label Father ID
+			input(type='text' name='dad' placeholder='Father ID')
+		p
+			label Mother ID
+			input(type='text' name='mom' placeholder='Mother ID')
+		p
+			label Gender
+			input(type='text' name='gender' placeholder='Gender')
+		p
+			label Band ID
+			input(type='text' name='band' placeholder='Band ID')
+		p
+			label Microchip ID
+			input(type='text' name='chip' placeholder='Microchip ID')
+		p
+			label DNA Fingerprint Sample ID
+			input(type='text' name='dna' placeholder='DNA Fingerprint Sample ID')
+		p
+			label Mutation
+			input(type='text' name='mutation' placeholder='Mutation')
+		
+		
+		p
+			label Status
+			input(type='text' name='' placeholder='Status')
+		p
+			label Owner
+			input(type='text' name='owner' placeholder='Owner')
+		p
+			label Acquired From
+			input(type='text' name='' placeholder='Aviary or previous owner.')
+		p
+			label Notes
+		p
+			textarea(rows='5' cols='30' name='notes' placeholder='Any notes you would like to keep. (Noteable Markings, Medical, Behavior.)')
+		

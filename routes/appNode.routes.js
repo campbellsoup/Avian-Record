@@ -10,13 +10,13 @@ router.post('/', NodeController.create);
 
 //Read
 router.get('/', NodeController.index);
-//router.get('/aviary/show', NodeController.show);
+//router.get('/show', NodeController.show);
 
 //Update
-//router.get('/aviary/edit', NodeController.edit);
-//router.put('/aviary', NodeController.update);
+router.get('/:id/edit', NodeController.edit);
+//router.put('/:id', NodeController.update);
 
 //Delete
-//router.delete('/aviary', NodeController.destoy);
+//router.delete('/', NodeController.destoy);
 
 module.exports = router;

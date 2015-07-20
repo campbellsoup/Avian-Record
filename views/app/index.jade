@@ -9,6 +9,6 @@ block content
 		each item in inventory
 			tr
 				td
-					a(href='/app/'+ item._id)= item.pet
+					a(href='/app/#{item._id}/edit')= item.pet
 				td= item.species
 				td= item.location

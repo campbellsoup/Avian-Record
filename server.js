@@ -2,7 +2,8 @@
 var express = require('express'),
 	jade = require('jade'),
 	mongoose = require('mongoose'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser')
+	methodOverride = require('method-override');
 
 // access remote aviary database
 mongoose.connect('mongodb://scaw76:collide76@ds047622.mongolab.com:47622/aviary')
@@ -15,6 +16,7 @@ app.set('views', './views');
 app.set('view engine', 'jade');
 
 app.use(bodyParser.urlencoded({ extended:false }));
+app.use(methodOverride('_method'));
 app.use('/', express.static('public'));
 
 // test a jade file  
