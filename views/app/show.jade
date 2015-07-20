@@ -6,7 +6,8 @@ block content
 	br
 	a(href='/app/new') New Record
 	br
-		
+	form(method='post' action='/app/#{item._id}?_method=delete')
+		input(type='submit' value='Delete')
 
 	h2 Species: #{item.species} | Name: #{item.pet} | Location: #{item.location} 
 
@@ -22,5 +23,4 @@ block content
 				br **User or Profile Name
 			p Notes: #{item.notes} 
 			
-				form(method='post' action='/app/#{item._id}?_method=delete')
-					input(type='submit' value='Delete this Bird') 
+				 
