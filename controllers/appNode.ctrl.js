@@ -26,22 +26,28 @@ var AppController = {
 				inventory: inventory
 			});
 		});
-	}/*
+	},/*
 	show: function (req,res)
 	{
 		res.send('show connected')
 	},
-
+	*/
 	//Update
 	edit: function (req,res)
 	{
-		res.send('edit connected')
-	},
+		Inventory.findOne({_id: req.params.id}, function (err, item) 
+		{
+			res.render('app/edit', {
+				item: item
+			});
+		});
+		
+	}/*,
 	update: function (req,res)
 	{
 		res.send('update connected')
 	},
-
+	
 	//Delete
 	destroy: function (req,res)
 	{
