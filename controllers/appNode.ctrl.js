@@ -13,8 +13,14 @@ var AppController = {
 			pet: req.body.pet,
 			location: req.body.location
 		});
-		inventory.save(function (err,inventory){
-			res.redirect('/app');
+
+		inventory.save(function (err,inventory)
+		{
+			if (req.params.format =='json'){
+				res.status(201).json(inventory);
+			} else {
+				res.redirect('/app');
+			}
 		});
 	},
 	
@@ -23,17 +29,27 @@ var AppController = {
 	{
 		Inventory.find({},function (err, inventory)
 		{
-			res.render('app/index', {
-				inventory: inventory
-			});
+			if (req.params.format == 'json')
+			{
+				res.json(inventory);
+			}else{
+				res.render('app/index', {
+					inventory: inventory
+				});
+			}
 		});
 	},
 	show: function (req,res){
 		Inventory.findOne({_id: req.params.id}, function (err, item) 
 		{
-			res.render('app/show', {
-				item: item
-			});
+			if (req.params.format == 'json')
+			{
+				res.json(item);
+			} else {
+				res.render('app/show', {
+					item: item
+				});
+			}
 		});
 	},
 	//Update
@@ -54,7 +70,12 @@ var AppController = {
 			pet: req.body.pet,
 			location: req.body.location
 		}, function (err, item) {
-			res.redirect('/app')
+			if (req.params.format == 'json')
+			{
+				res.status(200).json(item);
+			} else {
+				res.redirect('/app/'+req.params.id);
+			}
 		});
 	},
 	//Delete
@@ -62,8 +83,12 @@ var AppController = {
 	{
 		Inventory.remove({_id:req.params.id}, function (err)
 		{
-			res.redirect('/app');
-		})
+			if (req.params.format == 'json'){
+				res.status(204).send('');
+			} else {
+				res.redirect('/app');
+			}
+		});
 	}
 };
 module.exports = AppController;
