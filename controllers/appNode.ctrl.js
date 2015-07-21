@@ -10,8 +10,24 @@ var AppController = {
 	{
 		var inventory = new Inventory({
 			species: req.body.species,
+			subspecies: req.body.subspecies,
+			hybrid: req.body.hybrid,
+			band: req.body.band,
+			hatch: req.body.hatch,
+			gender: req.body.gender,
+			mutation: req.body.mutation,
+			dad: req.body.dad,
+			mom: req.body.mom,
+			locate: req.body.locate,
+			acquired: req.body.acquired,
+			origin: req.body.origin,
+			owner: req.body.owner,
 			pet: req.body.pet,
-			location: req.body.location
+			imported: req.body.imported,
+			chip: req.body.chip,
+			dna: req.body.dna,
+			available: req.body.available,
+			notes: req.body.notes
 		});
 
 		inventory.save(function (err,inventory)
@@ -67,8 +83,24 @@ var AppController = {
 	{
 		Inventory.findOneAndUpdate({_id: req.params.id},{
 			species: req.body.species,
+			subspecies: req.body.subspecies,
+			hybrid: req.body.hybrid,
+			band: req.body.band,
+			hatch: req.body.hatch,
+			gender: req.body.gender,
+			mutation: req.body.mutation,
+			dad: req.body.dad,
+			mom: req.body.mom,
+			locate: req.body.locate,
+			acquired: req.body.acquired,
+			origin: req.body.origin,
+			owner: req.body.owner,
 			pet: req.body.pet,
-			location: req.body.location
+			imported: req.body.imported,
+			chip: req.body.chip,
+			dna: req.body.dna,
+			available: req.body.available,
+			notes: req.body.notes
 		}, function (err, item) {
 			if (req.params.format == 'json')
 			{
@@ -89,6 +121,6 @@ var AppController = {
 				res.redirect('/app');
 			}
 		});
-	}
+	} 
 };
 module.exports = AppController;

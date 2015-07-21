@@ -1,0 +1,29 @@
+a{
+	padding: 15px;
+}
+table{
+	border-spacing: 5px;
+}
+form label{
+	float:left;
+	width:200px;
+	text-align: right;
+	display: block;
+}
+label{
+	padding-right: 12px;
+}
+form{
+	/*display: block;*/
+	margin-top: 0em;
+}
+input, textarea{
+	display: block;
+	margin-bottom: 5px;
+}
+input[type=submit]{
+	margin-left: 210px; 
+}
+.show label{
+	display: list-item;
+}
