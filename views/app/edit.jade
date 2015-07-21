@@ -64,7 +64,7 @@ block content
 			input(type='text' name='available' value=item.available)
 
 			label Notes
-			
-			textarea(rows='5' cols='30' name='notes' value=item.notes)
-			
+			textarea(rows='5' cols='30' name='notes')
+				if item.notes
+					| #{item.notes}
 			input(type='submit' value='Save')
