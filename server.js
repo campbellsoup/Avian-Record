@@ -16,6 +16,7 @@ app.set('port', (process.env.PORT || 8080));
 app.set('views', './views');
 app.set('view engine', 'jade');
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:false }));
 app.use(methodOverride('_method'));
 app.use('/', express.static('public'));
@@ -23,11 +24,11 @@ app.use('/', express.static('public'));
 // test a jade file  
 app.get('/', function (req,res)
 {
-	res.render('hello');
+	res.render('app/new');
 });
 
 // routes
-app.use('/app', require('./routes/appNode.routes.js'));
+app.use('/', require('./routes/appNode.routes.js'));
 
 
 app.listen(app.get('port'), function()
