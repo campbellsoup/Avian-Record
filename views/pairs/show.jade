@@ -1,0 +1,15 @@
+extends ../layout
+block content
+	a(href='/pairs/') All Records
+	br
+	a(href='/pairs/#{pair._id}/edit') Edit Information
+	br
+	a(href='/pairs/new') New Pairing
+	br
+	form(method='post' action='/pairs/#{pair._id}?_method=delete')
+		input(type='submit' value='Delete')
+	p
+	h2 Species: #{pair.species} - Cage#: #{pair.location} - Father ID: #{pair.maleBand} - Mother ID: #{pair.femaleBand}
+	p
+	h3 Date Paired: #{pair.paired} - Coefficient of Relations: #{pair.coefficient} 
+	p Notes: #{pair.notes}

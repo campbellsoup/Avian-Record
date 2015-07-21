@@ -1,0 +1,25 @@
+extends ../layout
+block content
+	h1 Listing All Records For Aviary App
+	p
+		a(href='/app/new') New Record
+	table
+		tr 
+			th Species
+			th Band ID
+			th Hatch Date
+			th Gender
+			th Location
+			th Available
+
+		each item in inventory
+			tr
+				td= item.species
+				td
+					a(href='/app/#{item._id}')= item.band
+				td= item.hatch
+				td= item.gender
+				td= item.locate
+				td= item.available
+
+

@@ -1,0 +1,72 @@
+extends ../layout
+
+block title
+	title New Inventory Item
+block content
+	h3 Add New Inventory Item
+	//- add required to required fields before release
+	div
+		form(method='post' action='/app')
+			//- change to drop down pre populated with tracked species or other 
+			label Species
+			input(type='text' name='species' placeholder='Species')
+			//- drop down populated base on species
+			label Sub-Species
+			input(type='text' name='subspecies' placeholder='Sub-Species')
+			//- drop down populated base on species
+			label Hybrid Species
+			input(type='text' name='hybrid' placeholder='Hybrid Species')
+		
+			label Band ID
+			input(type='text' name='band' placeholder='Band ID')
+		
+			label Hatch Date
+			input(type='text' name='hatch' placeholder='Hatch Date')
+
+			label Gender
+			input(type='text' name='gender' placeholder='Gender')
+			//- make prefilled options based off of species
+			label Mutation
+			input(type='text' name='mutation' placeholder='Mutation')
+
+			label Father ID
+			input(type='text' name='dad' placeholder='Father ID')
+			
+			label Mother ID
+			input(type='text' name='mom' placeholder='Mother ID')
+
+			label Location
+			input(type='text' name='locate' placeholder='Location')
+
+			label Acquired From
+			input(type='text' name='acquired' placeholder='Aviary or previous owner.')
+
+			label Origin
+			input(type='text' name='origin' placeholder='Breeder if known')
+
+			//- change to question Is this a borrowed bird? click yes or no -if yes then input pops up
+			label Owner
+			input(type='text' name='owner' placeholder='Owner if borrowed')
+
+			label Pet Name
+			input(type='text' name='pet' placeholder='Pet Name')
+			
+			//- change to question - Was this bird imported yes or no -if yes input pops up
+			label Import Date
+			input(type='text' name='imported' placeholder='Import Date')
+			
+			label Microchip ID
+			input(type='text' name='chip' placeholder='Microchip ID')
+			
+			label DNA Fingerprint Sample ID
+			input(type='text' name='dna' placeholder='DNA Fingerprint Sample ID')
+
+			label Available
+			input(type='text' name='available' placeholder='Available')
+
+			label Notes
+			
+			textarea(rows='5' cols='30' name='notes' placeholder='Any notes you would like to keep. (Noteable Markings, Medical, Behavior.)')
+			
+			input(type='submit' value='Save')
+			
