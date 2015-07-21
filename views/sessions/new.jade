@@ -1,0 +1,11 @@
+extend ../layout
+
+block content
+	h3 Sign In
+	form(method='post' action='/login')
+		p
+			input(type="text" name="username" placeholder="Username")
+		p
+			input(type="text" name="password" placeholder="Password")
+		p
+			input(type="submit" value='Sign In')
