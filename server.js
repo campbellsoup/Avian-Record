@@ -24,7 +24,7 @@ app.use('/', express.static('public'));
 // test a jade file  
 app.get('/', function (req,res)
 {
-	res.render('app/new');
+	res.render('hello');
 });
 
 // routes
