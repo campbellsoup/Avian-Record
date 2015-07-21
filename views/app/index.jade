@@ -5,12 +5,21 @@ block content
 		a(href='/app/new') New Record
 	table
 		tr 
-			th Name
 			th Species
+			th Band ID
+			th Hatch Date
+			th Gender
 			th Location
+			th Available
+
 		each item in inventory
 			tr
-				td
-					a(href='/app/#{item._id}')= item.pet
 				td= item.species
-				td= item.location
+				td
+					a(href='/app/#{item._id}')= item.band
+				td= item.hatch
+				td= item.gender
+				td= item.locate
+				td= item.available
+
+
