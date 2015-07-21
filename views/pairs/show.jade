@@ -9,7 +9,7 @@ block content
 	form(method='post' action='/pairs/#{pair._id}?_method=delete')
 		input(type='submit' value='Delete')
 	p
-	h2 Species: #{pair.species} - Cage#: #{pair.location} - Father ID: #{pair.maleBand} - Mother ID: #{pair.femaleBand}
+	h2 Species: #{pair.species} - Cage#: #{pair.locate} - Father ID: #{pair.maleBand} - Mother ID: #{pair.femaleBand}
 	p
 	h3 Date Paired: #{pair.paired} - Coefficient of Relations: #{pair.coefficient} 
 	p Notes: #{pair.notes}
