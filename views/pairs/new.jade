@@ -8,18 +8,19 @@ block content
 	form(method='post' action='/pairs')
 		p
 			label Male-Band ID:
-			input(type='text' name='band' placeholder='Father ID')
+			input(type='text' name='maleBand' placeholder='Father ID')
 		p
 			label Female-Band ID:
-			input(type='text' name='band' placeholder='Hen ID')
+			input(type='text' name='femaleBand' placeholder='Hen ID')
 		p
-			//-This field should autofil based on Band ID
-			Label Species:
-			div(id='species' placeholder='Species')
+			//-This field should autofill based on Band ID
+			//-Check that male-female species are same else enter "Hybrid"
+			Label Species: Green Cheek
+			//-Label Species: #{pair.species}
 		p
 			//-Calculation based on Male&Female pedegree
-			label Co-Efficient of Relations:
-			div(id='coefficientRelations' placeholder="Co-Efficient")
+			label Co-Efficient of Relations: ".15%"
+			//-label Co-Efficient of Relations: #{pair.coefficient}
 		p
 			label Date Paired:
 			input(type='date' name='paired')

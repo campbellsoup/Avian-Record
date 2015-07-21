@@ -2,13 +2,14 @@ extends ../layout
 block content
 	a(href='/pairs/') All Records
 	br
-	a(href='/pairs/#{item._id}/edit') Edit Information
+	a(href='/pairs/#{pair._id}/edit') Edit Information
 	br
 	a(href='/pairs/new') New Pairing
 	br
-	form(method='post' action='/pairs/#{item._id}?_method=delete')
+	form(method='post' action='/pairs/#{pair._id}?_method=delete')
 		input(type='submit' value='Delete')
 	p
-	h2 Species: #{item.species} | Cage#: #{item.location} | Father ID: #{item.band} | Mother ID: #{item.band}
+	h2 Species: #{pair.species} - Cage#: #{pair.location} - Father ID: #{pair.maleBand} - Mother ID: #{pair.femaleBand}
 	p
-	h3 Date Paired: #{item.paired} |  
+	h3 Date Paired: #{pair.paired} - Coefficient of Relations: #{pair.coefficient} 
+	p Notes: #{pair.notes}
