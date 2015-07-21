@@ -4,30 +4,34 @@ block title
 block content
 	h3 Edit Pairs Record
 	//-
-	form(method='post' action='/pairs/#{item._id}?_method=put')
+	form(method='post' action='/pairs/#{pair._id}?_method=put')
 		p
 			label Male-Band ID:
-			input(type='text' name='band' value=item.band)
+			input(type='text' name='band' value=pair.band)
 		p
 			label Female-Band ID:
-			input(type='text' name='band' value=item.band)
+			input(type='text' name='band' value=pair.band)
 		p
 			//-This field should autofil based on Band ID
 			Label Species:
-			div(id='species' name='species' value=item.species)
+			div(id='species' name='species' value=pair.species)
 		p
 			//-Calculation based on Male&Female pedegree
 			label Co-Efficient of Relations:
-			div(id='coefficient' name='coefficient' value=item.coefficient)
+			div(id='coefficient' name='coefficient' value=pair.coefficient)
 		p
 			label Date Paired:
-			input(type='date' name='paired' value=item.paired)
+			input(type='date' name='paired' value=pair.paired)
 		p
 			label Location:
-			input(type='text' name='location' value='item.location')
+			input(type='text' name='location' value='pair.location')
 		p
 			//-Possibly add a mutation calculator.  Ether auto-caluculates based on the BandIDs or plugin a 3rd party calculator.
+			
+			//-Add a file upload. NOT Import, but upload and connected to pair ID
 			Label Notes:
-			textarea(rows='5' cols='30' name='notes' placeholder=' (Noteable: Markings, Medical, Behavior, or other.')
+			textarea(rows='5' cols='30' name='notes')
+				if pair.notes
+					| #{pair.notes}
 		p		
 			input(type='submit' value='Save')
