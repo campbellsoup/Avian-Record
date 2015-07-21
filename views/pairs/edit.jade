@@ -1,31 +1,30 @@
 extends ../layout
-
 block title
-	title New Breeding Pair
+	title Edit Pairs Record
 block content
-	h3 Add New Breeding Pair
-	//- add required to required fields before release
-	form(method='post' action='/pairs')
+	h3 Edit Pairs Record
+	//-
+	form(method='post' action='/pairs/#{item._id}?_method=put')
 		p
 			label Male-Band ID:
-			input(type='text' name='band' placeholder='Father ID')
+			input(type='text' name='band' value=item.band)
 		p
 			label Female-Band ID:
-			input(type='text' name='band' placeholder='Hen ID')
+			input(type='text' name='band' value=item.band)
 		p
 			//-This field should autofil based on Band ID
 			Label Species:
-			div(id='species' placeholder='Species')
+			div(id='species' name='species' value=item.species)
 		p
 			//-Calculation based on Male&Female pedegree
 			label Co-Efficient of Relations:
-			div(id='coefficientRelations' placeholder="Co-Efficient")
+			div(id='coefficient' name='coefficient' value=item.coefficient)
 		p
 			label Date Paired:
-			input(type='date' name='paired')
+			input(type='date' name='paired' value=item.paired)
 		p
 			label Location:
-			input(type='text' name='location' placeholder='Cage#')
+			input(type='text' name='location' value='item.location')
 		p
 			//-Possibly add a mutation calculator.  Ether auto-caluculates based on the BandIDs or plugin a 3rd party calculator.
 			Label Notes:
