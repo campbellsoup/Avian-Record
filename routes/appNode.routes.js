@@ -5,18 +5,18 @@ var NodeController = require('../controllers/appNode.ctrl.js');
 var router = express.Router();
 
 //Create
-router.get('/new', NodeController.new);
-router.post('/', NodeController.create);
+router.get('/app/new', 					NodeController.new);
+router.post('/app(.:format)?',	 		NodeController.create);
 
 //Read
-router.get('/', NodeController.index);
-router.get('/:id/show', NodeController.show);
+router.get('/app(.:format)?', 			NodeController.index);
+router.get('/app/(:id)(.:format)?', 	NodeController.show);
 
 //Update
-router.get('/:id/edit', NodeController.edit);
-router.put('/:id', NodeController.update);
+router.get('/app/:id/edit',	 			NodeController.edit);
+router.put('/app/(:id)(.:format)?',	 	NodeController.update);
 
 //Delete
-router.delete('/:id', NodeController.destroy);
+router.delete('/app/(:id)(.:format)?', 	NodeController.destroy);
 
 module.exports = router;
