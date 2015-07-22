@@ -1,13 +1,17 @@
 extends ../layout
 block content
-	a(href='/pairs/#{pair._id}/edit') Edit Information
 	br
-	a(href='/pairs/new') New Pairing
-	p
-	form(method='post' action='/pairs/#{pair._id}?_method=delete')
-		input(type='submit' value='Delete')
-	p
-	h2 Species: #{pair.species} - Cage#: #{pair.locate} - Father ID: #{pair.maleBand} - Mother ID: #{pair.femaleBand}
-	p
-	h3 Date Paired: #{pair.paired} - Coefficient of Relations: #{pair.coefficient} 
-	p Notes: #{pair.notes}
+	div
+		h2 Single Pair
+		div(class='show')
+			//-p label Species: #{pair.species}
+			label Cage#: #{pair.locate}
+			label Father ID: #{pair.maleBand}
+			label Mother ID: #{pair.femaleBand}
+			label Date Paired: #{pair.paired}
+			//-label Coefficient of Relations: #{pair.coefficient}
+			label Notes: #{pair.notes}
+			form(method='get' action='/pairs/#{pair._id}/edit')
+				input(type='submit' value='Edit Record')
+			form(method='post' action='/pairs/#{pair._id}?_method=delete')
+				input(type='submit' value='Delete')

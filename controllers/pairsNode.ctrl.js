@@ -32,20 +32,20 @@ var PairController = {
 	//Read
 	index: function (req,res)
 	{
-		Pair.find({},function (err, pair)
+		Pair.find({},function (err, pairs)
 		{
 			if (req.params.format == 'json')
 			{
-				res.json(pair);
+				res.json(pairs);
 			}else{
 				res.render('pairs/index', {
-					pair: pair
+					pairs: pairs
 				});
 			}
 		});
 	},
 	show: function (req,res){
-		Pair.findOne({_id: req.params.id}, function (err, pair) 
+		Pair.findOne({_id: req.params.id}, function (err, pair)
 		{
 			if (req.params.format == 'json')
 			{
@@ -70,10 +70,10 @@ var PairController = {
 	},
 	update: function (req,res)
 	{
-		Pairs.findOneAndUpdate({_id: req.params.id},{
+		Pair.findOneAndUpdate({_id: req.params.id},{
 			maleBand: req.body.maleBand,
 			femaleBand: req.body.femaleBand,
-		//both items below need coding to be auto generated on form	
+		//both items below need coding to be auto generated on form
 			//species: req.body.species,
 			//coefficient:req.body.coefficient,
 			paired: req.body.paired,
@@ -84,14 +84,14 @@ var PairController = {
 			{
 				res.status(200).json(pair);
 			} else {
-				res.redirect('/pairs/'+req.params.id);
+				res.redirect('/pairs/' + req.params.id);
 			}
 		});
 	},
 	//Delete
 	destroy: function (req,res)
 	{
-		Pairs.remove({_id:req.params.id}, function (err)
+		Pair.remove({_id:req.params.id}, function (err)
 		{
 			if (req.params.format == 'json'){
 				res.status(204).send('');
