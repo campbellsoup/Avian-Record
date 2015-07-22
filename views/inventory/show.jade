@@ -1,9 +1,9 @@
 extends ../layout
 block content
 	br
-	a(href='/app/') All Records
-	a(href='/app/#{item._id}/edit') Edit Information
-	a(href='/app/new') New Record
+	a(href='/inventory/') All Records
+	a(href='/inventory/#{item._id}/edit') Edit Information
+	a(href='/inventory/new') New Record
 	div
 		h2 Bird Identification and Notes
 		div(class='show')
@@ -26,5 +26,5 @@ block content
 			label DNA Fingerprint Sample ID: #{item.dna}
 			label Available: #{item.available}
 			label Notes: #{item.notes}
-			form(method='post' action='/app/#{item._id}?_method=delete')
+			form(method='post' action='/inventory/#{item._id}?_method=delete')
 				input(type='submit' value='Delete') 

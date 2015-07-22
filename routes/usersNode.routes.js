@@ -6,14 +6,14 @@ var router = express.Router();
 
 // Create
 router.get('/users/new', UsersController.new);
-router.post('/users', UsersController.create);
+router.post('/users(.:format)?', UsersController.create);
 // Read
-router.get('/users', UsersController.index);
-router.get('/users/(:id)', UsersController.show);
+router.get('/users(.:format)?', UsersController.index);
+router.get('/users/(:id)(.:format)?', UsersController.show);
 // Update
 router.get('/users/:id/edit', UsersController.edit);
-router.put('/users/:id', UsersController.update);
+router.put('/users/(:id)(.:format)?', UsersController.update);
 // Delete
-//router.delete('/user/:id', UsersController.destroy);
+router.delete('/users/(:id)(.:format)?', UsersController.destroy);
 
 module.exports = router;
