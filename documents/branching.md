@@ -37,7 +37,7 @@ CS3440 Branch Names
   * Deleted from local by reviewer and developer.
 
 ###bug/x
-  * Intermediate code, that is inteded to fix a bug on dev.
+  * Intermediate code, that is intended to fix a bug on dev.
   * __x__ should represent the bug being fixed.
   * Branches from dev by developer.
   * Pushed to remote by developer.
