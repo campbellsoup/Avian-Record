@@ -1,16 +1,30 @@
-extend ../layout
-//-
-	block content
-		h2 #{item.species} #{hybridSpecies} | Band ID: #{item.band}
-			p Sub-Species: #{subspecies} | Mutation: #{item.mutation} | Name: #{item.pet}
-			p Hatched: #{item.hatch} | #{item.gender} | Father ID: #{item.dad} X Mother ID: #{item.mom}
-			p Location: #{item.location} | Origin/Breeder: #{item.breeder} | Acquired from: #{item.acquired}
-		h3 Identification and Notes
-			p DNA ID: #{item.dna} | Microchip: #{item.chip} | Date Added to System: #{item.???}
-			p Current Owner: #{item.owner} | Status: #{item.available} | 
-				br **User or Profile Name
-			p Notes: #{item.notes} 
-			p
-				a(href='/app/#{item._id}/edit') Edit Information
-				form(method='post' action='/app/#{item._id}?_method=delete')
-					input(type='submit' value='Delete this Bird') 
+extends ../layout
+block content
+	br
+	a(href='/app/') All Records
+	a(href='/app/#{item._id}/edit') Edit Information
+	a(href='/app/new') New Record
+	div
+		h2 Bird Identification and Notes
+		div(class='show')
+			label Species: #{item.species}
+			label Sub-Species: #{item.subspecies}
+			label Hybrid Species: #{item.hybrid}
+			label Band ID: #{item.band}
+			label Hatch Date: #{item.hatch}
+			label Gender: #{item.gender}
+			label Mutation: #{item.mutation}
+			label Father ID: #{item.dad}
+			label Mother ID: #{item.mom}
+			label Location: #{item.locate}
+			label Acquired From: #{item.acquired}
+			label Origin: #{item.origin}
+			label Owner: #{item.owner}
+			label Pet Name: #{item.pet}
+			label Import Date: #{item.imported}
+			label Microchip ID: #{item.chip}
+			label DNA Fingerprint Sample ID: #{item.dna}
+			label Available: #{item.available}
+			label Notes: #{item.notes}
+			form(method='post' action='/app/#{item._id}?_method=delete')
+				input(type='submit' value='Delete') 

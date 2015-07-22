@@ -2,67 +2,69 @@ extends ../layout
 block title
 	title Edit Record
 block content
-	h3 Edit Record
-	//-
-	form(method='post' action='/app/#{item._id}?_method=put')
-		p
+	h3 Edit Inventory Item
+	//- add required to required fields before release
+	div
+		form(method='post' action='/app/#{item._id}?_method=put')
+			//- change to drop down pre populated with tracked species or other 
 			label Species
 			input(type='text' name='species' value=item.species)
-		p
-			label Pet Name
-			input(type='text' name='pet' value=item.pet)
-		p
-			label Location
-			input(type='text' name='location' value=item.location)
-		p
-			input(type='submit' value='Save')
-	//-
-		p
+			//- drop down populated base on species
 			label Sub-Species
-			input(type='text' name='subspecies' placeholder='Sub-Species')
-		p
+			input(type='text' name='subspecies' value=item.subspecies)
+			//- drop down populated base on species
 			label Hybrid Species
-			input(type='text' name='hybridSpecies' placeholder='Hybrid Species')
-		p
-			label Hatch or Import Date
-			input(type='text' name='hatchImport' placeholder='Hatch Date or Import Date')
-		p
-			label Breeder
-			input(type='text' name='breeder' placeholder='Breeder')
-		p
-			label Father ID
-			input(type='text' name='dad' placeholder='Father ID')
-		p
-			label Mother ID
-			input(type='text' name='mom' placeholder='Mother ID')
-		p
-			label Gender
-			input(type='text' name='gender' placeholder='Gender')
-		p
+			input(type='text' name='hybrid' value=item.hybrid)
+		
 			label Band ID
-			input(type='text' name='band' placeholder='Band ID')
-		p
-			label Microchip ID
-			input(type='text' name='chip' placeholder='Microchip ID')
-		p
-			label DNA Fingerprint Sample ID
-			input(type='text' name='dna' placeholder='DNA Fingerprint Sample ID')
-		p
+			input(type='text' name='band' value=item.band)
+		
+			label Hatch Date
+			input(type='text' name='hatch' value=item.hatch)
+
+			label Gender
+			input(type='text' name='gender' value=item.gender)
+			//- make prefilled options based off of species
 			label Mutation
-			input(type='text' name='mutation' placeholder='Mutation')
-		
-		
-		p
-			label Status
-			input(type='text' name='' placeholder='Status')
-		p
-			label Owner
-			input(type='text' name='owner' placeholder='Owner')
-		p
+			input(type='text' name='mutation' value=item.mutation)
+
+			label Father ID
+			input(type='text' name='dad' value=item.dad)
+			
+			label Mother ID
+			input(type='text' name='mom' value=item.mom)
+
+			label Location
+			input(type='text' name='locate' value=item.locate)
+
 			label Acquired From
-			input(type='text' name='' placeholder='Aviary or previous owner.')
-		p
+			input(type='text' name='acquired' value=item.acquired)
+
+			label Origin
+			input(type='text' name='origin' value=item.origin)
+
+			//- change to question Is this a borrowed bird? click yes or no -if yes then input pops up
+			label Owner
+			input(type='text' name='owner' value=item.owner)
+
+			label Pet Name
+			input(type='text' name='pet' value=item.pet)			
+			
+			//- change to question - Was this bird imported yes or no -if yes input pops up
+			label Import Date
+			input(type='text' name='imported' value=item.imported)
+			
+			label Microchip ID
+			input(type='text' name='chip' value=item.chip)
+			
+			label DNA Fingerprint Sample ID
+			input(type='text' name='dna' value=item.dna)
+
+			label Available
+			input(type='text' name='available' value=item.available)
+
 			label Notes
-		p
-			textarea(rows='5' cols='30' name='notes' placeholder='Any notes you would like to keep. (Noteable Markings, Medical, Behavior.)')
-		
+			textarea(rows='5' cols='30' name='notes')
+				if item.notes
+					| #{item.notes}
+			input(type='submit' value='Save')
