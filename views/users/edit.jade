@@ -1,21 +1,20 @@
 extends ../layout
 block head
 block title
-  title Users
+  title Edit Users
 block content
-  h2 New Registration
+  h2 Edit User Profile
 
-  form(method='post' action='/users')
+  form(method='post' action='/users/#{user._id}?_method=put')
       label First Name: 
-      input(type='text' name='firstName')
+      input(type='text' name='firstName' value=user.firstName)
       label Last Name: 
-      input(type='text' name='lastName')
+      input(type='text' name='lastName' value=user.lastName)
       label * Email: 
-      input(type='text' name='email')
+      input(type='text' name='email' value=user.email)
       label * Username: 
-      input(type='text' name='username')
-      label * Password: 
-      input(type='password' name='password')
+      input(type='text' name='username' value=user.username)
+      //- change password link or option
       input(type='submit' value='Register')
   //-
     p
@@ -34,4 +33,3 @@ block content
     p
       label * Confirm Password: 
       input(type='password' name='confirmpassword')
-    

@@ -41,24 +41,55 @@ var UsersController = {
 				users: users
 			});
 		});
-	}
-/*
-	index: function (req,res)
+	},
+	show: function (req,res)
 	{
-		Inventory.find({}, function (err, inventory)
+		User.findOne({_id: req.params.id}, function (err, user)
 		{
-			if (req.params.format == 'json')
-			{
-				res.json(inventory);
-			}else{
-				res.render('app/index', {
-					inventory: inventory
-				});
-			}
+			res.render('users/show', {
+					user: user
+			});
 		});
-	},*/
+	},
 	// Update
+	edit: function (req,res)
+	{
+		User.findOne({_id: req.params.id}, function (err, user)
+		{
+			res.render('users/edit', {
+				user: user
+			});
+		});
+	},
+	update: function (req,res)
+	{
+		User.findOneAndUpdate({_id: req.params.id},
+		{
+			firstName: req.body.firstName,
+			lastName: req.body.lastName,
+			email: req.body.email,
+			username: req.body.username
+			//aviary: req.body.aviary
+			//band7Id: req.body.bandId
+			//species: req.body.
+			//member: req.body.
+		}, function (err, item)
+		{
+			res.redirect('/users/'+req.params.id);
+		});
+
+	},
 	// Delete
+	destroy: function (req,res)
+	{
+		User.remove({_id: req.params.id}, function (err)
+		{
+			if(err){
+				console.log(err);
+			}
+			res.redirect('/users');
+		});
+	}
 };
 
 module.exports = UsersController;
