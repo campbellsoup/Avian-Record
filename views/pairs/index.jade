@@ -6,21 +6,21 @@ block content
 	table
 		tr 
 			th Cage #
-			th Species
+			//-th Species
 			th Male
 			th Female
 			//-Pull just the year it was paired from the input date
 			th Yr Paired 
 			//-Pull from logs -collapsed "persistant data"
-			th Chicks Produced
-		each pair in pairs
+			//-th Chicks Produced
+		each item in pairs
 			tr
 				td
-					a(href='/pairs/#{pair._id}/show')= pair.locate
-				td= pair.species
-				td= pair.maleBand
-				td= pair.femaleBand
+					a(href='/pairs/#{item._id}')= item.locate
+				//-td= pair.species
+				td= item.maleBand
+				td= item.femaleBand
 				//-Pull and Display just the Year from the date added
-				td= pair.paired
+				td= item.paired
 				//-May need to pull data from logs
-				td= pair.chicks
+				//-td= pair.chicks

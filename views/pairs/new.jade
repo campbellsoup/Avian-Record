@@ -5,37 +5,26 @@ block title
 block content
 	a(href='/pairs/') All Records
 	br
-	a(href='/pairs/#{pair._id}/edit') Edit Information
-	br
-	a(href='/pairs/new') New Pairing
-	p
 	h3 Add New Breeding Pair
 	//- add required to required fields before release
+	
 	form(method='post' action='/pairs')
-		p
-			label Male-Band ID:
-			input(type='text' name='maleBand' placeholder='Father ID')
-		p
-			label Female-Band ID:
-			input(type='text' name='femaleBand' placeholder='Hen ID')
-		p
-			//-This field should autofill based on Band ID
-			//-Check that male-female species are same else enter "Hybrid"
-			Label Species: Green Cheek
-			//-Label Species: #{pair.species}
-		p
-			//-Calculation based on Male&Female pedegree
-			label Co-Efficient of Relations: ".15%"
-			//-label Co-Efficient of Relations: #{pair.coefficient}
-		p
-			label Date Paired:
-			input(type='date' name='paired')
-		p
-			label Location:
-			input(type='text' name='locate' placeholder='Cage#')
-		p
-			//-Possibly add a mutation calculator.  Ether auto-caluculates based on the BandIDs or plugin a 3rd party calculator.
-			Label Notes:
-			textarea(rows='5' cols='30' name='notes' placeholder=' (Noteable: Markings, Medical, Behavior, or other.')
-		p		
-			input(type='submit' value='Save')
+		label Male-Band ID:
+		input(type='text' name='maleBand' placeholder='Father ID')
+		label Female-Band ID:
+		input(type='text' name='femaleBand' placeholder='Hen ID')
+		//-This field should autofill based on Band ID
+		//-Check that male-female species are same else enter "Hybrid"
+		Label Species: Green Cheek
+		//-Label Species: #{pair.species}
+		//-Calculation based on Male&Female pedegree
+		label Co-Efficient of Relations: ".15%"
+		//-label Co-Efficient of Relations: #{pair.coefficient}
+		label Date Paired:
+		input(type='date' name='paired')
+		label Location:
+		input(type='text' name='locate' placeholder='Cage#')
+		//-Possibly add a mutation calculator.  Ether auto-caluculates based on the BandIDs or plugin a 3rd party calculator.
+		Label Notes:
+		textarea(rows='5' cols='30' name='notes' placeholder=' (Noteable: Markings, Medical, Behavior, or other.')
+		input(type='submit' value='Save')

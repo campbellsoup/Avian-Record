@@ -7,27 +7,20 @@ block content
 	h3 Edit Pairs Record
 	//-
 	form(method='post' action='/pairs/#{pair._id}?_method=put')
-		p
+			label Location / Cage#:
+			input(type='text' name='locate' value=pair.locate)
 			label Male-Band ID:
-			input(type='text' name='band' value=pair.band)
-		p
+			input(type='text' name='band' value=pair.maleBand)
 			label Female-Band ID:
-			input(type='text' name='band' value=pair.band)
-		p
+			input(type='text' name='band' value=pair.femaleBand)
 			//-This field should autofil based on Band ID
 			Label Species:
 			div(id='species' name='species' value=pair.species)
-		p
 			//-Calculation based on Male&Female pedegree
 			label Co-Efficient of Relations:
 			div(id='coefficient' name='coefficient' value=pair.coefficient)
-		p
 			label Date Paired:
 			input(type='date' name='paired' value=pair.paired)
-		p
-			label Location:
-			input(type='text' name='locate' value='pair.locate')
-		p
 			//-Possibly add a mutation calculator.  Ether auto-caluculates based on the BandIDs or plugin a 3rd party calculator.
 			
 			//-Add a file upload. NOT Import, but upload and connected to pair ID
@@ -35,5 +28,5 @@ block content
 			textarea(rows='5' cols='30' name='notes')
 				if pair.notes
 					| #{pair.notes}
-		p		
-			input(type='submit' value='Save')
+			p		
+			input(type='submit' value='Update Pair')
