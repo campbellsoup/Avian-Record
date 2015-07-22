@@ -78,18 +78,18 @@ var UsersController = {
 			res.redirect('/users/'+req.params.id);
 		});
 
-	},
+	}/*,
 	// Delete
 	destroy: function (req,res)
 	{
-		User.remove({_id: req.params.id}, function (err)
+		req.user.remove(function (err)
 		{
 			if(err){
-				console.log(err);
-			}
+				console.log(err, "mine");
+			};
 			res.redirect('/users');
 		});
-	}
+	}*/
 };
 
 module.exports = UsersController;
