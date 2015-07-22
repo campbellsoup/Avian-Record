@@ -1,10 +1,10 @@
-var Inventory = require('../models/app.data.js');
+var Inventory = require('../models/inventory.data.js');
 
-var AppController = {
+var InventoryController = {
 	//Create
 	new: function (req,res)
 	{
-		res.render('app/new', {});
+		res.render('inventory/new', {});
 	},
 	create: function (req,res)
 	{
@@ -35,7 +35,7 @@ var AppController = {
 			if (req.params.format =='json'){
 				res.status(201).json(inventory);
 			} else {
-				res.redirect('/app');
+				res.redirect('/inventory');
 			}
 		});
 	},
@@ -49,7 +49,7 @@ var AppController = {
 			{
 				res.json(inventory);
 			}else{
-				res.render('app/index', {
+				res.render('inventory/index', {
 					inventory: inventory
 				});
 			}
@@ -62,7 +62,7 @@ var AppController = {
 			{
 				res.json(item);
 			} else {
-				res.render('app/show', {
+				res.render('inventory/show', {
 					item: item
 				});
 			}
@@ -73,7 +73,7 @@ var AppController = {
 	{
 		Inventory.findOne({_id: req.params.id}, function (err, item) 
 		{
-			res.render('app/edit', {
+			res.render('inventory/edit', {
 				item: item
 			});
 		});
@@ -106,7 +106,7 @@ var AppController = {
 			{
 				res.status(200).json(item);
 			} else {
-				res.redirect('/app/'+req.params.id);
+				res.redirect('/inventory/'+req.params.id);
 			}
 		});
 	},
@@ -118,9 +118,9 @@ var AppController = {
 			if (req.params.format == 'json'){
 				res.status(204).send('');
 			} else {
-				res.redirect('/app');
+				res.redirect('/inventory');
 			}
 		});
 	} 
 };
-module.exports = AppController;
+module.exports = InventoryController;
