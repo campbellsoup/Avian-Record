@@ -1,0 +1,17 @@
+extends ../layout
+block head
+block title
+	title Users
+block content
+	h2 User Profile
+	a(href='/users/') All Records
+	a(href='/users/#{user._id}/edit') Edit Information
+	a(href='/users/new') New Record
+	div(class='show')
+		label First Name: #{user.firstName}
+		label Last Name: #{user.lastName}
+		label Email: #{user.email}
+		label Username: #{user.username}
+		//- add link or option to change password
+		form(method='post' action='/users/#{user._id}?_method=delete')
+			input(type='submit' value='Delete') 
