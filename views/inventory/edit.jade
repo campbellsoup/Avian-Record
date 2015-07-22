@@ -5,7 +5,7 @@ block content
 	h3 Edit Inventory Item
 	//- add required to required fields before release
 	div
-		form(method='post' action='/app/#{item._id}?_method=put')
+		form(method='post' action='/inventory/#{item._id}?_method=put')
 			//- change to drop down pre populated with tracked species or other 
 			label Species
 			input(type='text' name='species' value=item.species)
