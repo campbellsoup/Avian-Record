@@ -1,0 +1,2 @@
+1. in app.js create module and state
+2. create controller, template, factory

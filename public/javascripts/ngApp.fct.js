@@ -1,5 +1,5 @@
 (function () {
-  angular.module('?????')
+  angular.module('avianApp')
     .factory('?????', ['$resource', function ($resource) {
       return $resource('/?????/:?????_id.json');
     }]);
