@@ -43,7 +43,7 @@ var AppController = {
 	//Read
 	index: function (req,res)
 	{
-		Inventory.find({},function (err, inventory)
+		Inventory.find({}, function (err, inventory)
 		{
 			if (req.params.format == 'json')
 			{

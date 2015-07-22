@@ -1,0 +1,22 @@
+extends ../layout
+block head
+block title
+	title Users
+block content
+	h2 Listing all users
+		a(href='/users/new') New user
+	table
+		tr 
+			th First Name
+			th Last Name
+			th Email
+			th Username
+
+		each user in users
+			tr
+				td
+					a(href='/user/#{user._id}')= user.firstName
+				td= user.lastName
+				td= user.email
+				td= user.username
+
