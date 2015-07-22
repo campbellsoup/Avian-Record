@@ -1,38 +1,37 @@
-extend ../layout
-
+extends ../layout
+block head
+block title
+  title Users
 block content
   h2 New Registration
 
   form(method='post' action='/users')
-    p
-      label * Username: 
-      input(type='text' name='username')
-    p
       label First Name: 
       input(type='text' name='firstName')
-    p
       label Last Name: 
       input(type='text' name='lastName')
-    p
       label * Email: 
-      input(type='email' name='email')
+      input(type='text' name='email')
+      label * Username: 
+      input(type='text' name='username')
+      label * Password: 
+      input(type='password' name='password')
+      input(type='submit' value='Save')
+  //-
     p
       label Aviary Name: 
-      input(type='text' name='aviaryname')
+      input(type='text' name='aviary')
     p
       label Band ID: 
-      input(type='text' name='bandid')
+      input(type='text' name='bandId')
     p
       label * Species in your Aviary: 
       input(type='text' name='species')
     p
       label Member of: 
       input(type='text' name='membership' value='ASA or AFA')
-    p
-      label * Password: 
-      input(type='password' name='password')
+    
     p
       label * Confirm Password: 
       input(type='password' name='confirmpassword')
-    p
-      input(type='submit' value='Register')
+    
