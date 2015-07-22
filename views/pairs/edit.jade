@@ -2,6 +2,8 @@ extends ../layout
 block title
 	title Edit Pairs Record
 block content
+	a(href='/pairs/new') New Pairing
+	p
 	h3 Edit Pairs Record
 	//-
 	form(method='post' action='/pairs/#{pair._id}?_method=put')

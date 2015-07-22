@@ -1,11 +1,9 @@
 extends ../layout
 block content
-	a(href='/pairs/') All Records
-	br
 	a(href='/pairs/#{pair._id}/edit') Edit Information
 	br
 	a(href='/pairs/new') New Pairing
-	br
+	p
 	form(method='post' action='/pairs/#{pair._id}?_method=delete')
 		input(type='submit' value='Delete')
 	p

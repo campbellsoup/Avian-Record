@@ -3,6 +3,12 @@ extends ../layout
 block title
 	title New Breeding Pair
 block content
+	a(href='/pairs/') All Records
+	br
+	a(href='/pairs/#{pair._id}/edit') Edit Information
+	br
+	a(href='/pairs/new') New Pairing
+	p
 	h3 Add New Breeding Pair
 	//- add required to required fields before release
 	form(method='post' action='/pairs')
