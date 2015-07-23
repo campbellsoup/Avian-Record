@@ -10,7 +10,7 @@ router.post('/inventory(.:format)?',	 		NodeController.create);
 
 //Read
 router.get('/inventory(.:format)?', 			NodeController.index);
-router.get('/inventory/(:id)(.:format)?', 	NodeController.show);
+router.get('/inventory/(:id)(.:format)?', 		NodeController.show);
 
 //Update
 router.get('/inventory/:id/edit',	 			NodeController.edit);
