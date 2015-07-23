@@ -1,0 +1,15 @@
+extends ../layout
+block head
+block title
+	title Sessions
+block content
+	h2 Listing All Sessions
+		a(href='/sessions/new') Login In
+	table
+		tr 
+			th Username
+
+		each user in users
+			tr
+				td
+					a(href='/users/#{user._id}')= user.username
