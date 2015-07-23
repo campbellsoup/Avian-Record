@@ -1,8 +1,14 @@
 body{
 	font-family: arial;
-	background-color: #ccc;
+	background-color: #000;
 }
 
+#aviary{
+	width:960px;
+	margin:0px auto;
+	background-color: #ccc;
+	overflow: hidden;
+}
 header{
 	height:100px;
 	background-color:#ccc;
@@ -30,8 +36,6 @@ nav{
 .views{
 	display:inline;
 	float:right;
-	width:825px;
-	margin-right: 155px;
 	background: #fff;
 	padding:5px;
 	margin-left:10px;
