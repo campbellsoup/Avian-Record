@@ -1,0 +1,38 @@
+body{
+	font-family: arial;
+	background-color: #ccc;
+}
+
+header{
+	height:100px;
+	background-color:#ccc;
+	border-style:solid;
+	border-bottom-color:#000000;
+	padding:10px;
+}
+
+.containerwrapper{
+	display: inline-block;
+}
+
+nav{
+	float:left;
+	padding:10px;
+	width:150px;
+	min-height:400px;
+	background-color:#ccc;
+	font-size:14pt;
+	border-style:solid;
+	border-bottom-color:#fff;
+
+}
+
+.views{
+	display:inline;
+	float:right;
+	width:825px;
+	margin-right: 155px;
+	background: #fff;
+	padding:5px;
+	margin-left:10px;
+}

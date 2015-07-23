@@ -2,7 +2,8 @@ doctype html
 html
 	head
 		meta(charset='utf-8')
-		link(rel='stylesheet', href='/stylesheets/wireFrames.css')
+		//-link(rel='stylesheet', href='/stylesheets/wireFrames.css')
+		link(rel='stylesheet', href='/stylesheets/app.css')
 		script(type='text/javascript' src="//code.jquery.com/jquery-1.11.3.min.js")
 		
 		block head
@@ -10,7 +11,9 @@ html
 	block title
 
 	body
-		div
+		header
 			h1 Avian Records
+		div(class='containerwrapper')
 			include nav
-			block content
+			div(class='views')
+				block content
