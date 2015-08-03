@@ -12,7 +12,9 @@ html
 		div
 			if (user)
 				h2 Welcome, #{user.username}!
+				a(href='/inventory/') All Records
 			else
 				h2 Welcome! 
-		a(href="sessions/new") Login
-		a(href='/users/new') Sign Up!
+		p
+			a(href="sessions/new") Login
+			a(href='/users/new') Sign Up!

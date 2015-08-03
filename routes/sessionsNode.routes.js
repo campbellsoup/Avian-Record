@@ -7,5 +7,6 @@ var router = express.Router();
 
 router.get('/sessions/new', SessionsController.new);
 router.post('/sessions', 	passport.authenticate('local'), SessionsController.create);
+router.delete('/sessions', SessionsController.destroy);
 
 module.exports = router;

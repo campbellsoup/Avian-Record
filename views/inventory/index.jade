@@ -1,8 +1,12 @@
 extends ../layout
 block content
 	h1 Listing All Records For Aviary Inventory
+	div
+		form(method='post' action='/sessions/?_method=delete')
+			input(type='submit' value='Logout')
 	p
 		a(href='/inventory/new') New Record
+		
 	table
 		tr 
 			th Species
