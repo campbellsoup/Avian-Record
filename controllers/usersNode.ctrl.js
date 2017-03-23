@@ -27,7 +27,7 @@ var UsersController = {
 			else if(req.params.format =='json'){
 				res.json(user);
 			}else{
-				res.redirect('/users');
+				res.redirect('/sessions/new');
 				//res.send('you have been registered');
 			}
 		});

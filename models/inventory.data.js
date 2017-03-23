@@ -1,21 +1,7 @@
-/*
-var inventory = [
-	'bob',
-	'joe',
-	'babbet'
-];
-
-var Inventory = {
-	getAll: function (){
-		return inventory;
-	}
-};
-
- module.exports = Inventory;
-*/
 var mongoose = require('mongoose')
 
 var schema = new mongoose.Schema({
+	userId: { type: mongoose.Schema.ObjectId, ref: 'User' },
 	species: String,
 	subspecies: String,
 	hybrid: String,

@@ -30,6 +30,8 @@ var InventoryController = {
 			notes: req.body.notes
 		});
 
+		inventory.userId = req.user._id;
+
 		inventory.save(function (err,inventory)
 		{
 			if (req.params.format =='json'){
@@ -43,7 +45,12 @@ var InventoryController = {
 	//Read
 	index: function (req,res)
 	{
-		Inventory.find({}, function (err, inventory)
+		console.log('inventory index');
+		var dbQuery = {};
+		if (req.user){
+			dbQuery.userId = req.user._id;
+		}
+		Inventory.find(dbQuery, function (err, inventory)
 		{
 			if (req.params.format == 'json')
 			{
@@ -56,6 +63,7 @@ var InventoryController = {
 		});
 	},
 	show: function (req,res){
+		console.log('inventory show');
 		Inventory.findOne({_id: req.params.id}, function (err, item) 
 		{
 			if (req.params.format == 'json')
